@@ -1,0 +1,24 @@
+# Kafka Streams WordCount - Conduktor Compatible (with Topology webserver)
+
+This is just the [standard Apache Kafka wordcount application](https://github.com/apache/kafka/blob/trunk/streams/examples/src/main/java/org/apache/kafka/streams/examples/wordcount/WordCountDemo.java) with:
+
+- the Topology description logged `System.out.println(topology.describe());`
+- a web server with a route `http://localhost:8080/topology` that returns the topology `topology.describe()`
+
+This allows 
+- to visualize the topology [online](https://zz85.github.io/kafka-streams-viz/#VG9wb2xvZ2llczoKICAgU3ViLXRvcG9sb2d5OiAwCiAgICBTb3VyY2U6IEtTVFJFQU0tU09VUkNFLTAwMDAwMDAwMDAgKHRvcGljczogW3N0cmVhbXMtcGxhaW50ZXh0LWlucHV0XSkKICAgICAgLS0+IEtTVFJFQU0tRkxBVE1BUFZBTFVFUy0wMDAwMDAwMDAxCiAgICBQcm9jZXNzb3I6IEtTVFJFQU0tRkxBVE1BUFZBTFVFUy0wMDAwMDAwMDAxIChzdG9yZXM6IFtdKQogICAgICAtLT4gS1NUUkVBTS1LRVktU0VMRUNULTAwMDAwMDAwMDIKICAgICAgPC0tIEtTVFJFQU0tU09VUkNFLTAwMDAwMDAwMDAKICAgIFByb2Nlc3NvcjogS1NUUkVBTS1LRVktU0VMRUNULTAwMDAwMDAwMDIgKHN0b3JlczogW10pCiAgICAgIC0tPiBLU1RSRUFNLUZJTFRFUi0wMDAwMDAwMDA2CiAgICAgIDwtLSBLU1RSRUFNLUZMQVRNQVBWQUxVRVMtMDAwMDAwMDAwMQogICAgUHJvY2Vzc29yOiBLU1RSRUFNLUZJTFRFUi0wMDAwMDAwMDA2IChzdG9yZXM6IFtdKQogICAgICAtLT4gS1NUUkVBTS1TSU5LLTAwMDAwMDAwMDUKICAgICAgPC0tIEtTVFJFQU0tS0VZLVNFTEVDVC0wMDAwMDAwMDAyCiAgICBTaW5rOiBLU1RSRUFNLVNJTkstMDAwMDAwMDAwNSAodG9waWM6IEtTVFJFQU0tQUdHUkVHQVRFLVNUQVRFLVNUT1JFLTAwMDAwMDAwMDMtcmVwYXJ0aXRpb24pCiAgICAgIDwtLSBLU1RSRUFNLUZJTFRFUi0wMDAwMDAwMDA2CgogIFN1Yi10b3BvbG9neTogMQogICAgU291cmNlOiBLU1RSRUFNLVNPVVJDRS0wMDAwMDAwMDA3ICh0b3BpY3M6IFtLU1RSRUFNLUFHR1JFR0FURS1TVEFURS1TVE9SRS0wMDAwMDAwMDAzLXJlcGFydGl0aW9uXSkKICAgICAgLS0+IEtTVFJFQU0tQUdHUkVHQVRFLTAwMDAwMDAwMDQKICAgIFByb2Nlc3NvcjogS1NUUkVBTS1BR0dSRUdBVEUtMDAwMDAwMDAwNCAoc3RvcmVzOiBbS1NUUkVBTS1BR0dSRUdBVEUtU1RBVEUtU1RPUkUtMDAwMDAwMDAwM10pCiAgICAgIC0tPiBLVEFCTEUtVE9TVFJFQU0tMDAwMDAwMDAwOAogICAgICA8LS0gS1NUUkVBTS1TT1VSQ0UtMDAwMDAwMDAwNwogICAgUHJvY2Vzc29yOiBLVEFCTEUtVE9TVFJFQU0tMDAwMDAwMDAwOCAoc3RvcmVzOiBbXSkKICAgICAgLS0+IEtTVFJFQU0tU0lOSy0wMDAwMDAwMDA5CiAgICAgIDwtLSBLU1RSRUFNLUFHR1JFR0FURS0wMDAwMDAwMDA0CiAgICBTaW5rOiBLU1RSRUFNLVNJTkstMDAwMDAwMDAwOSAodG9waWM6IHN0cmVhbXMtd29yZGNvdW50LW91dHB1dCkKICAgICAgPC0tIEtUQUJMRS1UT1NUUkVBTS0wMDAwMDAwMDA4Cgo=)
+- to monitor and reset the topology in [Conduktor](https://conduktor.io/)
+
+## Conduktor Kafka Streams Setup
+The topology is at [http://localhost:8080/topology](http://localhost:8080/topology)
+
+Documentation at: [https://docs.conduktor.io/features/kafka-streams](https://docs.conduktor.io/features/kafka-streams)
+
+
+### Setup in Conduktor:
+
+![Conduktor Config Streams](https://cdn.conduktor.io/images/Conduktor+Config+Streams.png)
+
+### Monitoring and Reset Capabilities
+
+![Conduktor Monitor Streams](https://cdn.conduktor.io/images/Conduktor+Monitor+Streams.png)
